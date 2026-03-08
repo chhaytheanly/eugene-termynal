@@ -18,7 +18,7 @@ export default {
        · Built executive dashboards in Metabase
        · Wrote complex SQL queries for financial reporting
 
-    🏢  Research Assistant · Royal University of Phnom Penh
+   🏢  Research Assistant · Royal University of Phnom Penh
         Sep 2023 – Dec 2023
         · Conducted research on Khmer language processing
         · Published paper on word embeddings in Khmer
