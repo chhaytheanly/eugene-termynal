@@ -2,7 +2,7 @@ export default {
   description: "Show help information",
   run: () => `
   ╔═══════════════════════════════════════════════════════════╗
-  ║                   AVAILABLE COMMANDS                  ║
+  ║                   AVAILABLE COMMANDS                ║
   ╚═══════════════════════════════════════════════════════════╝
 
    📋  INFORMATION
