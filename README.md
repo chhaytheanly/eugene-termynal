@@ -1,73 +1,81 @@
-# React + TypeScript + Vite
+# Eugene Termynal (Terminal Portfolio)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight, React + TypeScript port of a terminal-like UI (Termynal).
 
-Currently, two official plugins are available:
+This repository provides a small interactive terminal component and a collection of example commands and data used to showcase a personal site-style terminal. It is intended for embedding a styled terminal UI into a web page and customizing commands and content.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**How it looks like**
 
-## React Compiler
+![demo](/public/image.png)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Features**
 
-## Expanding the ESLint configuration
+- Simple, keyboard-driven terminal UI
+- Predefined commands (about, contact, projects, help, etc.)
+- Easy to extend with custom commands and data
+- Built with Vite, React, and TypeScript
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**Quick Start**
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Install dependencies:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+  ```bash
+  npm install
+  ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Start development server:
+
+  ```bash
+  npm run dev
+  ```
+
+- Open http://localhost:5173 in your browser (Vite default).
+
+**Build**
+
+```bash
+npm run build
+npm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+**Usage / Integration**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- The terminal component lives at [src/components/ui/terminal.tsx](src/components/ui/terminal.tsx).
+- The terminal's styling and small helpers are in [src/components/ui/style.tsx](src/components/ui/style.tsx).
+- Commands are implemented under [src/core/commands](src/core/commands) — add new command modules exporting the same shape to extend functionality.
+- Core logic for executing commands and managing history is in [src/core/engine.ts](src/core/engine.ts) and [src/core/history.ts](src/core/history.ts).
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+To add a command:
+
+1. Create a new file in [src/core/commands](src/core/commands) exporting a command handler.
+2. Export it from [src/core/commands/index.ts](src/core/commands/index.ts) so it becomes available to the engine.
+
+**Project Structure**
+
+- [src/components/ui](src/components/ui): UI components and terminal wrapper
+- [src/core](src/core): Terminal engine, history, and command implementations
+- [src/data](src/data): Example data and content displayed by commands
+- [public/ascii.txt](public/ascii.txt): Optional ASCII art used by the greeting
+
+**Customization**
+
+- Replace or extend the command handlers to change responses and behavior.
+- Swap or extend the `profile`, `projects`, and `contact` data under [src/data](src/data) to reflect your content.
+- Styling can be adjusted in [src/components/ui/style.tsx](src/components/ui/style.tsx) and `index.css`.
+
+**Development Notes**
+
+- The app uses Vite for fast development and HMR. TypeScript configuration is in `tsconfig.json` and `tsconfig.app.json`.
+- Tests are not included in this port; consider adding a small test harness if you need CI checks.
+
+**Contributing**
+
+- Contributions are welcome. Please open issues for bugs or feature requests, and submit PRs with focused changes.
+
+**License**
+
+- Check `package.json` for the license field. If absent, please contact the maintainer.
+
+---
+
+Made with love by Me ❤️💕
