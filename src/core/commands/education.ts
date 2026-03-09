@@ -7,7 +7,7 @@ export default {
   └─────────────────────────────────────────────────────┘
 
    🎓  Eng. Artificial Intelligence & Data Science
-       Royal University of Phnom Penh
+       Institute of Technology of Cambodia (ITC)
        2023 – Present · GPA: 4.0 / 4.0
 
    📚  Relevant Coursework
