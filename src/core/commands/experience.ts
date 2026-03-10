@@ -3,18 +3,19 @@ export default {
     run: () =>
         `
   ┌─────────────────────────────────────────────────────┐
-  │                    Experience                   │
+  │                    Experience                       │   
   └─────────────────────────────────────────────────────┘
 
-   🏢  AI Engineer Intern · TechCambodia Ltd
-       Jun 2024 – Present
+   🏢  AI Engineer Intern · Calmet National Hospital
+       August 2025 - November 2025
        · Built NLP pipeline for Khmer text classification
-       · Reduced model inference latency by 40%
+       · Build a scalable data processing system using Apache Spark
        · Deployed ML models via FastAPI on AWS ECS
+       · Developed AI-Chatbot for patient support using React + React Native
 
-   🏢  Data Analyst Intern · FinanceKH
-       Jan 2024 – May 2024
-       · Designed ETL pipelines processing 2M+ records/day
+   🏢  Machine Learning Engineer Intern · ITC 
+       June 2025 – Present
+       · LLM's application development
        · Built executive dashboards in Metabase
        · Wrote complex SQL queries for financial reporting
 

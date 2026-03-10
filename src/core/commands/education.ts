@@ -3,7 +3,7 @@ export default {
     run: () =>
         `
   ┌─────────────────────────────────────────────────────┐
-  │                     Education                   │
+  │                     Education                       │
   └─────────────────────────────────────────────────────┘
 
    🎓  Eng. Artificial Intelligence & Data Science

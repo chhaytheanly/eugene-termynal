@@ -2,7 +2,7 @@ export default {
     description: "Show my projects",
     run: () => `
   ┌─────────────────────────────────────────────────────┐
-  │                     Projects                    │
+  │                     Projects                        │
   └─────────────────────────────────────────────────────┘
 
    ⚡  KhmerLLM — Fine-tuned LLaMA-2 on Khmer corpus

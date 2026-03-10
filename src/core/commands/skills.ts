@@ -3,7 +3,7 @@ export default {
     run: () =>
         `
   ┌─────────────────────────────────────────────────────┐
-  │                    Tech Stack                   │
+  │                    Tech Stack                       │
   └─────────────────────────────────────────────────────┘
 
    Languages     Python · TypeScript · C/C++ · Go · SQL · Bash · R
